@@ -1,0 +1,46 @@
+$font-stack: 'Montserrat', sans-serif;
+$font-color: #333;
+$ten-color: #BB6464;
+$thirty-color: #CDB699;
+$sixty-color: #C3DBD9;
+
+* {
+  color: $font-color;
+  box-sizing: border-box;
+}
+
+body {
+  font: 100% 'Montserrat', sans-serif;
+  color: $font-color;
+}
+
+header {
+    color: $font-color;
+    border-bottom: $font-color 1px double;
+    min-height: 50px;
+}
+
+h1 {
+    color: $ten-color;
+    font-family: 'Playfair Display', serif;
+}
+
+ul {
+  list-style-type: none;
+  float: left;
+}
+
+li {
+  display: inline;
+  margin: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+footer {
+  background-color: $ten-color;
+  min-height: 70px;
+}
