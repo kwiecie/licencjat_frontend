@@ -1,14 +1,39 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 
-const Timeline = () => {
+const Timeline = ({ data }) => {
     return (
       <Layout>
         <h1>Linia czasu</h1>
-        <p>What a world.</p>
+        {
+          data.strapi.periods.data.map(period => (
+            <>
+              <h2 key={period.id}>
+                {period.attributes.title}
+              </h2>
+              <p key={period.id}>
+                {period.attributes.dates}
+              </p>
+            </>
+          ))
+        }
       </Layout>
     )
   }
+
+  export const query = graphql`
+  {
+    strapi {
+      periods {
+        data {
+          attributes {
+            title
+            dates
+          }
+        }
+      }
+    }
+  }`
 
   export default Timeline

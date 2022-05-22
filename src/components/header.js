@@ -1,8 +1,7 @@
 import React from 'react';
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { Link } from "gatsby"
 
 import * as headerStyles from './header.module.scss'
-
 
 //menu
 const menu = [
@@ -31,6 +30,7 @@ const menu = [
 const Header = () => {
     return (
         <header>
+          <img src={'../images/logo_licencjat.png'} alt='Logo strony'></img>
             <ul className={headerStyles.header}>
                 {menu.map(link => (
                     <li key={link.url}>

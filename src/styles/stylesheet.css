@@ -17,6 +17,13 @@ header {
 h1 {
   color: #BB6464;
   font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  margin-left: 5%;
+}
+
+h2 {
+  color: #BB6464;
+  font-family: 'Playfair Display', serif;
 }
 
 ul {
