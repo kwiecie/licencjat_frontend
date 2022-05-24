@@ -3,7 +3,6 @@ import * as characterStyles from './character.module.scss'
 
 const Character = ({ data }) => {
   const { attributes: { name, description, picture } } = data;
-  console.log(picture);
   const image = picture.data && picture.data.attributes.url;
   return (
     <div className={characterStyles.character}>

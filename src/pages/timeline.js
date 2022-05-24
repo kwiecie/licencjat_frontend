@@ -1,23 +1,23 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import Period from '../components/period'
+import TimelineMenu from "../components/timelineMenu"
+import * as timelineStyles from "../components/timeline.module.scss"
 
 const Timeline = ({ data }) => {
     return (
       <Layout>
-        <h1>Linia czasu</h1>
+        <div className={timelineStyles.timeline}>
         {
           data.strapi.periods.data.map(period => (
             <>
-              <h2 key={period.id}>
-                {period.attributes.title}
-              </h2>
-              <p key={period.id}>
-                {period.attributes.dates}
-              </p>
+              <TimelineMenu data={period} key={period.id} />
+              <Period data={period} key={period.id} />
             </>
           ))
         }
+        </div>
       </Layout>
     )
   }

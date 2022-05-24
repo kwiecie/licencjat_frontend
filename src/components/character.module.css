@@ -1,11 +1,13 @@
 .character {
   width: 27%;
+  max-width: 90%;
   border: 3px solid #BB6464;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   padding: 20px;
   margin: 25px;
+  box-shadow: 10px 10px #BB6464;
 }
 
 .image {
@@ -20,4 +22,14 @@
 .name {
   margin: 0 auto;
   margin-top: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .character {
+    width: 100%;
+  }
+  .image {
+    width: 200px;
+    height: 200px;
+  }
 }

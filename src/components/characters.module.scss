@@ -1,9 +1,16 @@
+$ten-color: #BB6464;
+
 .characters {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
 }
 
 .title {
     display: block;
+}
+
+@media only screen and (max-width: 600px) {
+    .characters {
+        display: block;
+    }
 }

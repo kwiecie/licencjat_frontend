@@ -1,5 +1,4 @@
 import * as React from "react"
-import { Link } from "gatsby"
 import Layout from "../components/layout"
 
 
@@ -11,7 +10,6 @@ const IndexPage = () => {
         Historia mody kobiecej XX w.
       </h1>
       <p>Ekran startowy aplikacji</p>
-      
     </Layout>
   )
 }

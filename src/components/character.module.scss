@@ -2,12 +2,14 @@ $ten-color: #BB6464;
 
 .character {
     width: 27%;
+    max-width: 90%;
     border: 3px solid $ten-color;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     padding: 20px;
     margin: 25px;
+    box-shadow: 10px 10px $ten-color;
 }
 
 .image {
@@ -22,4 +24,15 @@ $ten-color: #BB6464;
 .name {
     margin: 0 auto;
     margin-top: 10px; 
+}
+
+@media only screen and (max-width: 600px) {
+    .character {
+        width: 100%;
+    }
+
+    .image {
+        width: 200px;
+        height: 200px;
+    }
 }
