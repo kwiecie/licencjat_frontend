@@ -1,1 +1,1 @@
-.period{background-color:aqua;min-height:100vh;width:80%;float:left}.title{margin:0 auto}
+.period-sections{display:flex;flex-flow:column;margin-left:20%}.period{background-color:aqua;min-height:100vh}.title{margin:0 auto}

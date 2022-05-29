@@ -1,1 +1,1 @@
-.timelineMenu{width:17%;float:right}
+.timelineMenu{width:17%;float:left;position:fixed;list-style-type:circle;border-left:5px #BB6464}.timelinie-ul{list-style-type:circle;border-left:#BB6464}.list{margin-top:10px;line-height:30px}list::before{content:'';color:#BB6464}.list-period{font-size:20px;font-weight:500}.list-date{color:#BB6464}

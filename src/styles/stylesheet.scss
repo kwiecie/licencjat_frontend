@@ -1,3 +1,4 @@
+@import './reset.scss';
 $font-stack: 'Montserrat', sans-serif;
 $font-color: #333;
 $ten-color: #BB6464;
@@ -9,7 +10,12 @@ $sixty-color: #C3DBD9;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
+  padding: 0%;
   font: 100% 'Montserrat', sans-serif;
   color: $font-color;
 }
@@ -23,13 +29,14 @@ header {
 h1 {
     color: $ten-color;
     font-family: 'Playfair Display', serif;
-    font-size: 40px;
+    font-size: 42px;
     margin-left: 5%;
 }
 
 h2 {
   color: $ten-color;
   font-family: 'Playfair Display', serif;
+  font-size: 26px;
 }
 
 ul {

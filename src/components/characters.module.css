@@ -10,5 +10,10 @@
 @media only screen and (max-width: 600px) {
   .characters {
     display: block;
+    margin: 0;
+  }
+  .title {
+    text-align: center;
+    margin: 0;
   }
 }
