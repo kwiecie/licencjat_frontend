@@ -23,7 +23,7 @@
 .button:hover {
   background-color: #BB6464;
   color: white;
-  transition: .5s ease;
+  transition: .2s ease;
 }
 
 .buttons-container {

@@ -18,23 +18,11 @@ const menu = [
       url: "/characters",
     },
     {
-      text: "O projekcje",
-      url: "/about",
-    },
-    {
       text: "Quiz",
       url: "/quizes",
     },
   ]
 
-const showMenu = () => {
-  const hamilton = document.querySelector(".menu-mobile");
-  hamilton.addEventListener("click", function(){
-      document.querySelector("#menu").classList.toggle("menu-active");
-  })
-}
-
-showMenu();
 
 const Header = () => {
     return (
