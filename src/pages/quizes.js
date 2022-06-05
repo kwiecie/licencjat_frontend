@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import { Link } from "gatsby"
 import Layout from "../components/layout"
 import * as quizesStyles from "../components/quizes.module.scss"
 

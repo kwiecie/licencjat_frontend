@@ -1,29 +1,55 @@
 .timelineMenu {
     width: 17%;
-    float: left;
     position: fixed;
-    list-style-type: circle;
-    border-left: 5px #BB6464;
+    height: 70vh;
+    margin-left: 0;
 }
 
 .timelinie-ul {
-    list-style-type: circle;
-    border-left: #BB6464; 
+    margin-top: 2rem;
+    border-radius: 12px;
+    position: relative;
 }
 
 .list {
-    margin-top: 10px;
-    line-height: 30px;
+    display: flex;
+    flex-direction: column;
 }
 
-list::before {
+.li {
+    margin-top: 10px;
+    //padding-bottom: 1.5rem;
+    border-left: 1px solid #BB6464;
+    position: relative;
+    padding-left: 20px;
+    margin-left: 10px;
+    &:last-child{
+    border: 0px;
+    padding-bottom: 0;
+  }
+  &:before{
+    content: '';
+    width: 15px;
+    height: 15px;
+    background: white;
+    border: 1px solid #BB6464;
+    box-shadow: 3px 3px 0px #bab5f8;
+    box-shadow: 3px 3px 0px #bab5f8;
+    border-radius: 50%;
+    position: absolute;
+    left: -10px;
+    top: 0px;
+  }
+}
+
+li::before {
     content: '';
     color: #BB6464;
 
   }
 
 .list-period {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
 }
 

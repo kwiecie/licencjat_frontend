@@ -11,13 +11,13 @@ const Timeline = ({ data }) => {
     return (
       <Layout>
       <div className={timelineStyles.timeline}>
-      <TimelineMenu className={timelineMenuStyles.timeline}/>
+      <TimelineMenu className={timelineMenuStyles.timelineMenu}/>
         {
           data.strapi.periods.data.map(period => (
             <Period data={period} key={period.id} />
           ))
         }
-        </div>
+      </div>
       </Layout>
     )
   }

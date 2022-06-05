@@ -2,6 +2,9 @@ $ten-color: #BB6464;
 
 .header {
     padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .mobile-menu {
@@ -9,16 +12,17 @@ $ten-color: #BB6464;
 }
 
 .nav {
-    float: right;
-    display: inline;
+    display: flex;
+    flex-direction: row;
     margin-top: 25px;
     margin-right: 25px;
 }
 
 .nav-item {
-    margin: 10px;
     margin-top: auto;
     font-size: 18px;
+    display: inline;
+    margin: 20px;
 }
 
 .nav-item:hover {

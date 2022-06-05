@@ -23,9 +23,10 @@ const TimelineMenu = () => {
   return (
     <div className={timelineMenuStyles.timelineMenu}>
       <ul className={timelineMenuStyles.timelineUl}>
+      <div className={timelineMenuStyles.list}>
       {
         data.strapi.periods.data.map(period => (
-          <li key={period.id} className={timelineMenuStyles.list}>
+          <li key={period.id} className={timelineMenuStyles.li}>
               <Link to={`#${period.attributes.title}`} className={timelineMenuStyles.listPeriod}>
                 {period.attributes.title}
               </Link><br />
@@ -35,6 +36,7 @@ const TimelineMenu = () => {
           </li>
         ))
       }
+      </div>
       </ul>
     </div>
   )
