@@ -19,7 +19,6 @@ const TimelineMenu = () => {
     }
   `)
 
-  console.log(data)
   return (
     <div className={timelineMenuStyles.timelineMenu}>
       <ul className={timelineMenuStyles.timelineUl}>

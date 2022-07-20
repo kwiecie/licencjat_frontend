@@ -7,17 +7,18 @@ import * as timelineStyles from "../components/timeline.module.scss"
 import * as timelineMenuStyles from '../components/timelinemenu.module.scss'
 
 const Timeline = ({ data }) => {
-  //const { attributes: { title, dates } } = data;
+  const { strapi: { periods: { data: periodsData }, elementSylwetkis: { data: elements } } } = data;
+  console.log(elements)
     return (
       <Layout>
-      <div className={timelineStyles.timeline}>
-      <TimelineMenu className={timelineMenuStyles.timelineMenu}/>
-        {
-          data.strapi.periods.data.map(period => (
-            <Period data={period} key={period.id} />
-          ))
-        }
-      </div>
+        <div className={timelineStyles.timeline}>
+          <TimelineMenu className={timelineMenuStyles.timelineMenu}/>
+          {
+            periodsData.map(period => (
+              <Period data={period} key={period.id} elements={elements} />
+            ))
+          }
+        </div>
       </Layout>
     )
   }
@@ -30,6 +31,20 @@ const Timeline = ({ data }) => {
           attributes {
             title
             dates
+          }
+          id
+        }
+      }
+      elementSylwetkis {
+        data {
+          attributes {
+            period {
+              data {
+                id
+              }
+            }
+            title
+            description
           }
         }
       }
