@@ -1,6 +1,5 @@
 import React from 'react';
 import PeriodDesc from './periodDesc';
-import { graphql } from 'gatsby';
 
 import * as periodStyles from './period.module.scss'
 

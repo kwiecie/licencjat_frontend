@@ -46,5 +46,8 @@ module.exports = {
           exitEventName: 'sal:out', // Exit event name
       }
     },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+    },
   ]
 };

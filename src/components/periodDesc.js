@@ -1,15 +1,18 @@
 import React from 'react';
 
+import * as perioddescStyles from './perioddesc.module.scss'
+
+
 const PeriodDesc = ({ data }) => {
     const { attributes: { title, description } } = data;
     return (
-        <div>
+        <div className={perioddescStyles.div}>
           <h2>
             {title}
           </h2>
-          <p>
+          <a className={perioddescStyles.desc} activeClassName={perioddescStyles.activeDesc}>
             {description}
-          </p>
+          </a>
         </div>
     )
 }

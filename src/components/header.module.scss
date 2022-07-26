@@ -10,7 +10,9 @@ $ten-color: #BB6464;
 .mobile-menu {
     display: none;
 }
-
+.mobile-button {
+    display: none;
+}
 .nav {
     display: flex;
     flex-direction: row;
@@ -39,6 +41,35 @@ $ten-color: #BB6464;
     width: 75px;
 }
 
+.navBar {
+    position: relative;
+  }
+  
+.navBar button {
+    position: fixed;
+    left: 40px;
+    top: 40px;
+    z-index: 10;
+    cursor: pointer;
+}
+  
+.menuNav {
+    overflow-y: scroll;
+    list-style: none;
+    position: fixed;
+    top: 0;
+    background: darkcyan;
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 0;
+    overflow: hidden;
+    max-width: 290px;
+    z-index: 9;
+}
+
+
+
 @media all and (max-width: 600px) {
     .header {
         display: flex;
@@ -46,6 +77,22 @@ $ten-color: #BB6464;
         justify-content: space-between;
     }
     .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        position: absolute;
+        margin: 0;
+        left: 0;
+        width: 100%;
+        height: 50vh;
+        top: 90px;
+        background: #BB6464;
+        z-index: 1;
+        transition: top .3s ease-in;
+        text-align: center;
+    }
+    
+    .mobile-button {
         display: inline-block;
         background-color: transparent;
         color: black;
@@ -57,5 +104,9 @@ $ten-color: #BB6464;
     }
     .menu.mobile-menu {
         top: 100%;
+    }
+
+    .show-menu {
+        color: aqua;
     }
 }
