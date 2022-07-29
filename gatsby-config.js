@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/19_kwiecien/licencjat`,
   siteMetadata: {
     title: `PUM`,
     siteUrl: `https://www.yourdomain.tld`
@@ -27,7 +28,7 @@ module.exports = {
       options: {
         typeName: "STRAPI",
         fieldName: "strapi",
-        url: "http://localhost:1337/graphql"
+        url: "https://brzoza.wzks.uj.edu.pl/19_kwiecien/backend/graphql"
       },
     },
     {
