@@ -1,3 +1,5 @@
+@import 'vars';
+
 .timelineMenu {
     width: 17%;
     position: fixed;
@@ -17,7 +19,7 @@
 }
 
 .li {
-    border-left: 1px solid #BB6464;
+    border-left: 1px solid $ten-color;
     position: relative;
     padding-left: 20px;
     padding-bottom: 10px;
@@ -31,7 +33,7 @@
     width: 15px;
     height: 15px;
     background: white;
-    border: 1px solid #BB6464;
+    border: 1px solid $ten-color;
     box-shadow: 3px 3px 0px #bab5f8;
     box-shadow: 3px 3px 0px #bab5f8;
     border-radius: 50%;
@@ -43,7 +45,7 @@
 
 li::before {
     content: '';
-    color: #BB6464;
+    color: $ten-color;
 
   }
 
@@ -53,5 +55,5 @@ li::before {
 }
 
 .list-date {
-    color: #BB6464;
+    color: $ten-color;
 }

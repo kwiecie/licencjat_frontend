@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Period from '../components/period'
 import TimelineMenu from "../components/timelineMenu"
+import Head from "../components/Head"
 import * as timelineStyles from "../components/timeline.module.scss"
 import * as timelineMenuStyles from '../components/timelinemenu.module.scss'
 
@@ -10,16 +11,19 @@ const Timeline = ({ data }) => {
   const { strapi: { periods: { data: periodsData }, elementSylwetkis: { data: elements } } } = data;
   console.log(elements)
     return (
-      <Layout>
-        <div className={timelineStyles.timeline}>
-          <TimelineMenu className={timelineMenuStyles.timelineMenu}/>
-          {
-            periodsData.map(period => (
-              <Period data={period} key={period.id} elements={elements} />
-            ))
-          }
-        </div>
-      </Layout>
+      <>
+        <Head title="Linia czasu"/>
+        <Layout>
+          <div className={timelineStyles.timeline}>
+            <TimelineMenu className={timelineMenuStyles.timelineMenu}/>
+            {
+              periodsData.map(period => (
+                <Period data={period} key={period.id} elements={elements} />
+              ))
+            }
+          </div>
+        </Layout>
+      </>
     )
   }
 
@@ -35,7 +39,7 @@ const Timeline = ({ data }) => {
           id
         }
       }
-      elementSylwetkis {
+      elementSylwetkis(pagination: { limit: 60 }) {
         data {
           attributes {
             period {

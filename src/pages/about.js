@@ -1,6 +1,7 @@
 import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
+import Head from "../components/Head"
 
 
 const About = () => {
@@ -18,10 +19,14 @@ const About = () => {
     }
   `)
     return (
-      <Layout>
-        <h1>O projekcie</h1>
-        <p>{data.strapi.aboutProject.data.attributes.description}</p>
-      </Layout>
+      <>
+        <Head title="O projekcie"/>
+        <Layout>
+          <h1>O projekcie</h1>
+          <p>{data.strapi.aboutProject.data.attributes.description}</p>
+        </Layout>
+      </>
+      
     )
   }
 

@@ -1,15 +1,13 @@
-$ten-color: #BB6464;
+@use 'mixins';
+@import 'vars';
 
 .character {
     width: 27%;
     max-width: 90%;
-    border: 3px solid $ten-color;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    padding: 20px;
-    margin: 25px;
-    box-shadow: 10px 10px $ten-color;
+    @include mixins.box-with-shadow;    
 }
 
 .image {

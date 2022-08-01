@@ -13,3 +13,30 @@
 .title {
     margin: 0 auto;
 }
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.image {
+    border: 1px solid;
+    height: 80vh;
+    width: 40%;
+}
+
+.desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 60%;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .image {
+        width: 100%;
+    }
+}

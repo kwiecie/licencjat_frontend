@@ -6,10 +6,6 @@ import * as headerStyles from './header.module.scss'
 //menu
 const menu = [
     {
-      text: "Strona główna",
-      url: "/",
-    },
-    {
       text: "Linia czasu",
       url: "/timeline",
     },
@@ -20,6 +16,10 @@ const menu = [
     {
       text: "Quiz",
       url: "/quizes",
+    },
+    {
+      text: "O projekcie",
+      url: "/about",
     },
   ]
 

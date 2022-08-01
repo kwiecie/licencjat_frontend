@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: `/19_kwiecien/licencjat`,
+  pathPrefix: `/~19_kwiecien/licencjat`,
   siteMetadata: {
     title: `PUM`,
     siteUrl: `https://www.yourdomain.tld`

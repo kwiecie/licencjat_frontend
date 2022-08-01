@@ -1,4 +1,49 @@
-.div {
+@use 'mixins';
+@import 'vars';
+
+.div-open {
     display: flex;
     flex-flow: column;
+    justify-content: flex-start;
+    margin: 0;
+    margin: 0 0 15px 15px;
+    padding: 20px;
+    border: 1.5px solid $font-color;
+    box-shadow: 10px 10px $ten-color;
+    transition-duration: 0.4s;
+    width: 100%;
+}
+
+.div-closed {
+    border: none;
+}
+
+.desc-closed {
+    display: none;
+}
+
+.button-open {
+    margin: 0;
+    margin: 0 0 15px 15px;
+    padding: 15px;
+    border: 1.5px solid $font-color;
+    box-shadow: 10px 10px $ten-color;
+    width: 100%;
+    cursor: pointer;
+}
+
+.button-open:hover {
+    background-color: #BB6464;
+    h2 {
+        color: white;
+    }
+}
+
+.button-closed {
+    width: 100%;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    margin-bottom: 15px;
+    //transition: .2s ease;
 }

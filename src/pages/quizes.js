@@ -1,7 +1,7 @@
-import { Link } from "gatsby"
 import React, { useState } from "react"
 import Layout from "../components/layout"
 import * as quizesStyles from "../components/quizes.module.scss"
+import Head from "../components/Head"
 
 const Quizes = () => {
   const questions = [
@@ -126,62 +126,65 @@ const Quizes = () => {
 
   console.log(questions[0].answers[0].isCorrect)
     return (
-      <Layout>
-        <h1 className={quizesStyles.h1}>Quiz</h1>
-        <div className={quizesStyles.quiz}> 
-          { showQuiz ? (
-            showScore ? (
-              <>
-                <h2>
-                  Twój wynik to: {score}/{questions.length}
-                </h2>
-                <button 
-                  className={quizesStyles.button}
-                  onClick={() => resetQuiz()}
-                  >
-                    Spróbuj ponownie!
-                </button>
-              </>
+      <>
+        <Head title="Quiz"/>
+        <Layout>
+          <h1 className={quizesStyles.h1}>Quiz</h1>
+          <div className={quizesStyles.quiz}> 
+            { showQuiz ? (
+              showScore ? (
+                <>
+                  <h2>
+                    Twój wynik to: {score}/{questions.length}
+                  </h2>
+                  <button 
+                    className={quizesStyles.button}
+                    onClick={() => resetQuiz()}
+                    >
+                      Spróbuj ponownie!
+                  </button>
+                </>
+              ) : (
+                <>
+                  <h2>
+                    Pytanie {currentQuestion + 1}/{questions.length}
+                  </h2>
+                  <p>
+                    {questions[currentQuestion].questionText}
+                  </p>
+                  <div className={quizesStyles.buttonsContainer}>
+                    {questions[currentQuestion].answers.map((answers)=> (
+                      <button 
+                        className={quizesStyles.button}
+                        key={answers.answerText} 
+                        onClick={() => handleAnswerButtonClick(answers.isCorrect)}
+                      >
+                        {answers.answerText}
+                      </button>
+                    ))}
+                  </div>
+                </>            
+              )
             ) : (
               <>
-                <h2>
-                  Pytanie {currentQuestion + 1}/{questions.length}
-                </h2>
-                <p>
-                  {questions[currentQuestion].questionText}
-                </p>
-                <div className={quizesStyles.buttonsContainer}>
-                  {questions[currentQuestion].answers.map((answers)=> (
-                    <button 
-                      className={quizesStyles.button}
-                      key={answers.answerText} 
-                      onClick={() => handleAnswerButtonClick(answers.isCorrect)}
-                    >
-                      {answers.answerText}
-                    </button>
-                  ))}
-                </div>
-              </>            
+              <p>
+              Sprawdź swoją wiedzę!
+              </p>
+              <p>
+                Quiz składa się z 10 pytań.
+              </p>
+              <button 
+                className={quizesStyles.button}
+                onClick={() => handleShowQuizButtonClick()}
+                >
+                Rozpocznij quiz
+              </button>
+              </>
             )
-          ) : (
-            <>
-            <p>
-            Sprawdź swoją wiedzę!
-            </p>
-            <p>
-              Quiz składa się z 10 pytań.
-            </p>
-            <button 
-              className={quizesStyles.button}
-              onClick={() => handleShowQuizButtonClick()}
-              >
-              Rozpocznij quiz
-            </button>
-            </>
-          )
-          }
-        </div>
-      </Layout>
+            }
+          </div>
+        </Layout>
+      </>
     )
   }
 

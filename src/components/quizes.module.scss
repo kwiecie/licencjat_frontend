@@ -1,18 +1,18 @@
-$ten-color: #BB6464;
+@use 'mixins';
+@import 'vars';
 
 .h1 {
     margin: 0 auto;
+    margin-bottom: 20px;
     text-align: center;
 }
 
 .quiz {
-    border: 3px solid $ten-color;
-    padding: 20px;
-    margin: 25px;
-    box-shadow: 10px 10px $ten-color;
+    @include mixins.box-with-shadow;
     display: flex;
     flex-direction: column;
     width: 500px;
+    margin: 0 auto;
 }
 
 .button {
@@ -20,10 +20,11 @@ $ten-color: #BB6464;
     background-color: white;
     padding: 5px;
     margin: 2px;
+    transition-duration: 0.4s;
 }
 
 .button:hover {
-    background-color: #BB6464;
+    background-color: $ten-color;
     color: white;
     transition: .2s ease;
 }

@@ -1,1 +1,1 @@
-.div{display:flex;flex-flow:column}
+.div-open{display:flex;flex-flow:column;justify-content:flex-start;border:solid 1.5px #333;box-shadow:10px 10px #BB6464}.div-closed{border:none}.desc-closed{display:none}.button-open{border:2px solid #BB6464;background-color:white;padding:5px;margin:2px}.button-open:hover{background-color:#BB6464;cursor:pointer}.button-open:hover h2{color:white}.button-closed{border:none;background-color:white;transition:.2s ease}
