@@ -20,9 +20,9 @@ const About = () => {
   `)
     return (
       <>
-        <Head title="O projekcie"/>
+        <Head title="O serwisie"/>
         <Layout>
-          <h1>O projekcie</h1>
+          <h1>O serwisie</h1>
           <p>{data.strapi.aboutProject.data.attributes.description}</p>
         </Layout>
       </>

@@ -10,10 +10,15 @@ import * as timelineMenuStyles from '../components/timelinemenu.module.scss'
 const Timeline = ({ data }) => {
   const { strapi: { periods: { data: periodsData }, elementSylwetkis: { data: elements } } } = data;
   console.log(elements)
+  //console.log(periodsData.image.data.attributes.url)
     return (
       <>
+        <a id="top"></a>
         <Head title="Linia czasu"/>
         <Layout>
+          <a href="#top">
+              <button className={timelineStyles.upButton}>Do góry</button>
+          </a>
           <div className={timelineStyles.timeline}>
             <TimelineMenu className={timelineMenuStyles.timelineMenu}/>
             {
@@ -35,6 +40,13 @@ const Timeline = ({ data }) => {
           attributes {
             title
             dates
+            image {
+              data {
+                attributes {
+                  url
+                }
+              }
+            }
           }
           id
         }

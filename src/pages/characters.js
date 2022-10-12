@@ -8,7 +8,6 @@ import Character from '../components/character'
 import * as characterStyles from '../components/characters.module.scss'
 
 const Characters = ({ data }) => {
-    // const { attributes: { name, description } } = data;
     return (
       <>
         <Head title="Postacie"/>

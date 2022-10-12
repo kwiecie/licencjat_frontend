@@ -1,5 +1,5 @@
-import React from 'react';
-
+import React from 'react'
+import arrow from '../images/down-arrow.png'
 import * as perioddescStyles from './perioddesc.module.scss'
 
 
@@ -15,6 +15,7 @@ const PeriodDesc = ({ data, isActive, setActivePeriod, idx }) => {
             <h2>
               {title}
             </h2>
+            <img src={arrow} className={perioddescStyles[isActive ? "arrowOpen" : "arrowClosed"]}/>
           </button>
           <p className={perioddescStyles[isActive ? " " : "descClosed"]} activeClassName={perioddescStyles.activeDesc}>
             {description}

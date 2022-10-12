@@ -57,3 +57,9 @@ li::before {
 .list-date {
     color: $ten-color;
 }
+
+@media only screen and (max-width: 600px) {
+  .timelineMenu {
+     display: none;
+  }
+}

@@ -3,7 +3,7 @@
     flex-flow: column;
     margin-left: 20%;
     width: 100%;
-    padding: 10px;
+    padding-left: 20px;
 }
 
 .period {
@@ -19,7 +19,6 @@
 }
 
 .image {
-    border: 1px solid;
     height: 80vh;
     width: 40%;
 }
@@ -35,8 +34,17 @@
     .container {
         display: flex;
         flex-direction: column;
+        justify-content: center;
     }
     .image {
         width: 100%;
+        margin: 0 auto;
+    }
+    .desc {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .period-section {
+        margin-left: 0;
     }
 }

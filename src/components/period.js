@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
-import PeriodDesc from './periodDesc';
-
+import React, { useState } from 'react'
+import PeriodDesc from './periodDesc'
 import * as periodStyles from './period.module.scss'
 
 const Period = ({ data, elements }) => {
-  const { attributes: { title, dates }, id } = data;
+  const { attributes: { title, dates, image }, id } = data;
+  //console.log(image.data.attributes.url);
   const periodElements = elements.filter(el => el.attributes.period.data.id === id);
+  const picture = image.data && image.data.attributes.url;
   const [activePeriod, setActivePeriod] = useState(null);
   return (
     <div className={periodStyles.periodSection}>
@@ -17,11 +18,15 @@ const Period = ({ data, elements }) => {
           {dates}
         </p>
         <div className={periodStyles.container}>
-          <div className={periodStyles.image}>
+          {/* <div className={periodStyles.image}>
             image
-          </div>
+          </div> */}
+          {picture && <img src={`https://brzoza.wzks.uj.edu.pl/19_kwiecien/backend/${picture}`} 
+            className={periodStyles.image} 
+            alt={`${title} - ilustracja `}>
+          </img>}
           <div className={periodStyles.desc}>  
-          {periodElements.map((element, idx) => (
+            {periodElements.map((element, idx) => (
               <PeriodDesc 
                 data={element} 
                 key={element.id} 
@@ -30,7 +35,7 @@ const Period = ({ data, elements }) => {
                 setActivePeriod={setActivePeriod} 
               />
             ))
-          }
+            }
           </div>
         </div>
         </section>

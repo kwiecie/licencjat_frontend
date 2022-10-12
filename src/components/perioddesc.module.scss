@@ -1,6 +1,12 @@
 @use 'mixins';
 @import 'vars';
 
+@keyframes rotate {
+    from {transform: rotate(0);}
+    to {transform: rotate(180deg);}
+}
+
+
 .div-open {
     display: flex;
     flex-flow: column;
@@ -10,12 +16,13 @@
     padding: 20px;
     border: 1.5px solid $font-color;
     box-shadow: 10px 10px $ten-color;
-    transition-duration: 0.4s;
     width: 100%;
 }
 
 .div-closed {
     border: none;
+    //transition: height 2s;
+    //transition-timing-function: linear;
 }
 
 .desc-closed {
@@ -34,16 +41,49 @@
 
 .button-open:hover {
     background-color: #BB6464;
+    transition: ease-in .4s;
     h2 {
         color: white;
     }
 }
 
 .button-closed {
+    margin: 0;
+    padding: 0;
     width: 100%;
     border: none;
     background-color: white;
     cursor: pointer;
     margin-bottom: 15px;
     //transition: .2s ease;
+}
+
+.button-open, .button-closed {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.arrow-closed {
+    transition: 1200ms;
+}
+
+.arrow-closed, .arrow-open {
+    width: 26px;
+    opacity: 30%; 
+}
+
+.arrow-open {
+    transform: rotate(180deg);
+    animation-name: rotate;
+    animation-duration: 1200ms;
+}
+
+@media only screen and (max-width: 600px) {
+    .div-open, .div-closed {
+        width: 100%;
+    }
+    .button-open, .button-closed, .div-open {
+        margin: 0 0 15px 0;
+    }
 }

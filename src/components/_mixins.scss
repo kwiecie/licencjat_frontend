@@ -6,3 +6,11 @@
     margin: 25px;
     box-shadow: 10px 10px $ten-color;
 }
+
+@mixin button {
+    border: 2px solid $ten-color;
+    background-color: white;
+    padding: 5px;
+    margin: 10px;
+    transition-duration: 0.4s;
+}

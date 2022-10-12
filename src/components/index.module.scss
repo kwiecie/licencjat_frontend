@@ -1,0 +1,57 @@
+@use 'mixins';
+@import 'vars';
+
+.button {
+    @include mixins.button;
+    margin: 0 auto;
+    margin-top: 10%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.button:hover {
+    background-color: $ten-color;
+    color: white;
+    transition: .2s ease;
+    cursor: pointer;
+    h2 {
+        color: white;
+    }
+}
+
+.illustration {
+    width: 30%;
+    margin: 20px;
+}
+
+.illustration:hover {
+    animation: rotate 5s infinite;
+}
+
+.wrapper {
+    width: 45%;
+    margin: auto;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+@keyframes rotate {
+    50% {transform: rotate(180deg);}
+}
+
+@media all and (max-width: 600px) {
+    .illustration {
+        width: 80%;
+    }
+    .content {
+        flex-direction: column;
+    }
+    .wrapper {
+        width: 100%;
+    }
+}

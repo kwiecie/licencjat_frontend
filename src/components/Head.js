@@ -1,11 +1,9 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
-import logo from "../images/logo_licencjat.png"
+import React from 'react'
+import { Helmet } from 'react-helmet'
 
 const Head = ({ title}) => {
   return (
     <>
-      <link rel="icon" type="image/x-icon" src={logo}></link>
         <Helmet
             defaultTitle="Default title | My website"
             title={title}
@@ -15,4 +13,4 @@ const Head = ({ title}) => {
   )
 }
 
-export default Head;
+export default Head

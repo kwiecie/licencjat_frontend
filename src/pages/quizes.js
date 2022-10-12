@@ -124,6 +124,14 @@ const Quizes = () => {
       setShowScore(true)
   }
 
+  const reloadQuiz = () => {
+    window.location.reload(false);
+  }
+
+  const showAnswers = () => {
+    questions.map();
+  }
+
   console.log(questions[0].answers[0].isCorrect)
     return (
       <>
@@ -139,7 +147,7 @@ const Quizes = () => {
                   </h2>
                   <button 
                     className={quizesStyles.button}
-                    onClick={() => resetQuiz()}
+                    onClick={() => reloadQuiz()}
                     >
                       Spróbuj ponownie!
                   </button>
