@@ -17,25 +17,12 @@ Website backend in (repository)[https://github.com/kwiecie/licencjat_backend]
 
 To run this website locally, follow these steps:
 
-1. Clone the repository:
-
-    ```bash
-    git clone <repository-url>
-    ```
-
-2. Navigate to the project directory:
-
-    ```bash
-    cd polish-fashion-history-website
-    ```
-
-3. Install dependencies:
+Install dependencies:
 
     ```bash
     npm install
     ```
-
-4. Start the development server:
+Start the development server:
 
     ```bash
     npm start
