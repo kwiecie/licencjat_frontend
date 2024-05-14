@@ -3,7 +3,7 @@ Website about Polish Fashion History, dedicated to exploring the evolution of Po
 
 The website currently hosted [here](https://brzoza.wzks.uj.edu.pl/) with some trouble for rendering illustrations.
 
-Website backend in (repository)[https://github.com/kwiecie/licencjat_backend]
+Website backend in [repository](https://github.com/kwiecie/licencjat_backend)
 
 ## Technologies Used
 
